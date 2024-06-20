@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="realwebsite.css">
+   </head>
+   <link rel="icon" type="image/png" href="favicon.png">
+    <title>Sam's Based Piano Opinion</title>
+</head>
+<body>
+
+    <div class="button-start">
+        <a href="./nocturnesite.html">
+            <button class="button-startm" role="button">Nocturne Op.9 No.2</button>
+        </a>
+      </div>
+
+      <div class="button-start1">
+            <a href="./moonlightsonatasite.html">
+        <button class="button-startm1" role="button">Moonlight Sonata 3rd Movement</button>
+        </a>
+      </div>
+
+      <div class="button-start2">
+        <a href="./turkishsite.html">
+            <button class="button-startm2" role="button">Rondo Alla Turca</button>
+        </a>
+      </div>
+      
+      <div class="button-start3">
+        <a href="./fantaisiesite.html">
+            <button class="button-startm3" role="button">Fantaisie Impromptu</button>
+        </a>
+      </div>
+
+      <div class="button-start4">
+        <a href="./FurEliseSite.html">
+            <button class="button-startm4" role="button">Für Elise</button>
+        </a>
+      </div>
+      
+    <div class="scroll-down" onclick="scrollDown()">
+        <span>&#9660; Scroll Down</span>
+    </div>
+    <div id="shadow"></div>
+
+    <div id="header"></div>
+
+    <div class="center">
+        <p class="top-five">TOP 5</p>
+        <h1>HARDEST PIANO PIECES</h1>
+        <p class="mom-edition">MOM EDITION</p>
+    </div>
+
+    <div class="image-container">
+        <img src="nocturne.png" alt="nocturne op9 no2">
+    </div>
+    
+    <p id="nocturne" class="centered-text">#5 Nocturne op.9 no.2</p>
+    
+    <div class="container">
+        <div class="fade-in-text">"Overrated" - Sam</div>
+    </div>
+    
+    <a href="./nocturnesite.html" class="button-link">
+        <button class="button-1" role="button">More Info #5</button>
+    </a>
+    
+    
+    <p id="moonlight" class="moonlights">#4 Moonlight Sonata 3rd Movement</p>
+    
+        <div class="moonlighti">
+        <img src="moonlightsonata.png" alt="moonlight sonata 3rd movement">
+    </div>
+
+    <div class="moonlightst">
+        <p class="fade-in-moonlight">Which one is harder? ThIs Or FaNtAiSiE ImPRoMpTu?!?!</p>
+        </div>
+        
+        <a href="./moonlightsonatasite.html" class="button-link">
+    <button class="button-2" role="button">More Info #4</button>
+    </a>
+
+    <div class="Turkish-March">
+        <p class="fade-in-Turkish">#3 Turkish March</p>
+        </div>
+
+        <div class="Turkish-MarchT">
+            <p class="fade-in-TurkishT">Moms be like: "How Fast Can You Play It?!?!"</p>
+            </div>
+
+            <div class="TurkishI">
+                <img src="TurkishMarch.png" alt="Turkish March">
+            </div>
+            
+            <a href="./turkishsite.html" class="button-link">
+                <button class="button-3" role="button">More Info #3</button>
+            </a>
+       
+        <div class="Fantaisie">
+            <p class="fade-in-Fantaisie">#2 Fantaisie Impromptu</p>
+            </div>
+
+            <div class="FantaisieI">
+                <img src="FantaisieImpromptu.png" alt="Fantaisie Impromptu">
+            </div>
+
+            <div class="FantaisieT">
+                <p class="fade-in-FantaisieT">R.I.P hands.</p>
+                </div>
+
+                <a href="./fantaisiesite.html" class="button-link">
+                    <button class="button-4" role="button">More Info #2</button>
+                </a>
+
+                <div class="Fur">
+                    <p class="fade-in-Fur">#1 Für Elise</p>
+                    </div>
+                    
+                    <div class="FurI">
+                        <img src="FurElise.png" alt="Fur Elise">
+                    </div>
+                    
+                    <div class="FurT">
+                        <p class="fade-in-FurT">Every mom is proud of their grade 5 children for playing this...</p>
+                        </div>
+
+                        <a href="./FurEliseSite.html" class="button-link">
+                            <button class="button-5" role="button">More Info #1</button>
+                        </a>
+        
+                        <div class="Crown">
+                            <img src="crown.png" alt="numba 1">
+                        </div>
+
+                        <div class="thank">
+                            <p class="fade-in-thank">Thank You</p>
+                            </div>
+
+                            
+                        <div class="sam">
+                            <p class="fade-in-sam">Presented by Sam</p>
+                            </div>
+
+    <main></main> <!-- purely for spacing -->
+
+    <script>
+        function scrollDown() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        window.addEventListener('scroll', function() {
+            var centerText = document.querySelector('.center');
+            var leftText = document.querySelector('.left-text');
+            var bottomText = document.querySelector('.bottom-text');
+            var centerPosition = centerText.getBoundingClientRect().top + (centerText.clientHeight / 2);
+            var scrollPosition = window.innerHeight / 2;
+            var scrollDown = document.querySelector('.scroll-down');
+            if (Math.abs(centerPosition - scrollPosition) <= 50) {
+                centerText.style.opacity = 1;
+            } else {
+                centerText.style.opacity = 0;
+            }
+
+            if (window.scrollY > 100) { 
+                scrollDown.classList.add('show-scroll');
+                leftText.classList.add('fade-in');
+                bottomText.classList.add('fade-in');
+            } else {
+                scrollDown.classList.remove('show-scroll');
+                leftText.classList.remove('fade-in');
+                bottomText.classList.remove('fade-in');
+            }
+
+            var shadow = document.getElementById('shadow');
+            if (window.scrollY > 0) {
+                shadow.classList.add('show');
+            } else {
+                shadow.classList.remove('show');
+            }
+        });
+
+        window.addEventListener('load', function() {
+            var centerText = document.querySelector('.center');
+            centerText.style.opacity = 1;
+        });
+
+        const nocturne = document.getElementById('nocturne');
+        const handleIntersection = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    nocturne.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+        const observer = new IntersectionObserver(handleIntersection);
+        observer.observe(nocturne);
+ // Nocturne text script
+
+ // Nocturne small text script
+        document.addEventListener('DOMContentLoaded', function() {
+            var fadeText = document.querySelector('.fade-in-text');
+            var windowHeight = window.innerHeight;
+
+            function fadeInOnScroll() {
+                var positionFromTop = fadeText.getBoundingClientRect().top;
+
+                if (positionFromTop - windowHeight <= 0) {
+                    fadeText.style.opacity = '1';
+                    window.removeEventListener('scroll', fadeInOnScroll); 
+                }
+            }
+
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+ // Nocturne small text script
+
+ // moonlight text script
+        const moonlight = document.getElementById('moonlight');
+const handleIntersectionMoonlight = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            moonlight.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+};
+const observerMoonlight = new IntersectionObserver(handleIntersectionMoonlight);
+observerMoonlight.observe(moonlight);
+ // moonlight text script
+ 
+ // nocturne image script
+ document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.image-container');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+ // nocturne image script
+ 
+ // moonlight image script
+ document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.moonlighti');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px -100% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+    
+  // moonlight image script
+
+  //moonlight small text script
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-moonlight');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+  //moonlight small text script
+
+  //Turkish March Text script
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-Turkish');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+  //Turkish March Text script
+
+  //Turkish March Image script
+  document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.TurkishI');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px -160% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+    //Turkish March Image script
+
+    //Turkish March small text script
+    document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-TurkishT');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//Turkish March small text script
+
+//Fantaisie Impromptu text script
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-Fantaisie');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//Fantaisie Impromptu text script
+
+//Fantaisie Impromptu Image script
+document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.FantaisieI');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px -160% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+//Fantaisie Impromptu Image script
+
+//Fantaisie small text script
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-FantaisieT');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//Fantaisie small text script
+
+//Fur Elise text script
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-Fur');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//Fur Elise text script
+
+//Fur Elise image script
+document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.FurI');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px -160% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+    //Fur Elise image script
+
+    //Fur Elise small text script
+    document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-FurT');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//Fur Elise small text script
+
+//crown image script
+document.addEventListener('DOMContentLoaded', function() {
+        const imageContainer = document.querySelector('.Crown');
+
+        const handleIntersectionImage = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('slide-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observerImage = new IntersectionObserver(handleIntersectionImage, {
+            root: null, 
+            rootMargin: '0px 0px 90% 0px', 
+            threshold: 0 
+        });
+        observerImage.observe(imageContainer);
+    });
+    //crown image script
+
+    //thank you script
+    document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-thank');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+//thank you script
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in-sam');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 1 });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+    </script>
+    
+    
+</body>
+</html>

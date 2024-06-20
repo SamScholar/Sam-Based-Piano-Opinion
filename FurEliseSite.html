@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+    <title>Fur Elise</title>
+    <style>
+
+body {
+            font-family: "JetBrains Mono", monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #202020;
+            color: #ffffff;
+            overflow-x: hidden; 
+            overflow: hidden;
+        }
+
+        .button-start {
+    position: relative;
+    width: 100%; 
+    height: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  
+  .button-startm {
+      position: absolute;
+    top: 50px; 
+    left: 280px; 
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0; 
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto; 
+    will-change: transform;
+  }
+  
+  .button-startm:disabled {
+    pointer-events: none;
+  }
+  
+  .button-startm:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+    transform: translateY(-10px);
+  }
+  
+  .button-startm:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+ 
+  .button-start1 {
+    position: relative;
+    width: 100%; 
+    height: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .button-startm1 {
+    position: absolute;
+  top: 50px; 
+  left: 530px; 
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0; 
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform;
+}
+
+.button-startm1:disabled {
+  pointer-events: none;
+}
+
+.button-startm1:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+    transform: translateY(-10px);
+}
+
+.button-startm1:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.button-start2 {
+    position: relative;
+    width: 100%; 
+    height: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .button-startm2 {
+    position: absolute;
+  top: 50px; 
+  left: 880px; 
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0; 
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform;
+}
+
+.button-startm2:disabled {
+  pointer-events: none;
+}
+
+.button-startm2:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+    transform: translateY(-10px);
+}
+
+.button-startm2:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.button-start3 {
+    position: relative;
+    width: 100%; 
+    height: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .button-startm3 {
+    position: absolute;
+  top: 50px; 
+  left: 1115px; 
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0; 
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto; 
+  will-change: transform;
+}
+
+.button-startm3:disabled {
+  pointer-events: none;
+}
+
+.button-startm3:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+    transform: translateY(-10px);
+}
+
+.button-startm3:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.button-start4 {
+    position: relative;
+    width: 100%; 
+    height: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .button-startm4 {
+    position: absolute;
+  top: 50px; 
+  left: 1378px; 
+  appearance: none;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0; 
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto; 
+  will-change: transform;
+}
+
+.button-startm4:disabled {
+  pointer-events: none;
+}
+
+.button-startm4:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+  transform: translateY(-10px);
+}
+
+.button-startm4:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#header {
+    opacity: 1;
+    position: absolute;
+    bottom: 1;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+        .chunkoftext {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            padding-top: 180px;
+            margin-left: 50px; 
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 1s, transform 1s;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateX(0); }
+
+   
+        .imagefade {
+            position: relative;
+            width: 300px; 
+            height: 370px; 
+            overflow: hidden;
+            border-radius: 15px;
+            left: 140px;
+            top: 20px
+        }
+        .imagefade {
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
+            transform: translateY(20px); 
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .imagefade img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        .fureliseimagefade1 {
+            position: relative;
+            width: 500px; 
+            height: 680px; 
+            overflow: hidden;
+            left: 780px;
+            top: -690px;
+
+        }
+        .fureliseimagefade1 {
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
+            transform: translateY(20px); 
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fureliseimagefade1 img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        .fureliseimagefade2 {
+            position: relative;
+            width: 220px; 
+            height: 300px; 
+            overflow: hidden;
+            left: 1300px;
+            top: -1370px;
+        }
+        .fureliseimagefade2 {
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
+            transform: translateY(20px); 
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fureliseimagefade2 img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        .fureliseimagefade3 {
+            position: relative;
+            width: 220px; 
+            height: 300px; 
+            overflow: hidden;
+            left: 1300px;
+            top: -1340px;
+        }
+        .fureliseimagefade3 {
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
+            transform: translateY(20px); 
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fureliseimagefade3 img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    
+  <div class="button-start">
+    <a href="./nocturnesite.html">
+        <button class="button-startm" role="button">Nocturne Op.9 No.2</button>
+    </a>
+  </div>
+
+  <div class="button-start1">
+    <a href="./moonlightsonatasite.html">
+    <button class="button-startm1" role="button">Moonlight Sonata 3rd Movement</button>
+    </a>
+  </div>
+
+  <div class="button-start2">
+    <a href="./turkishsite.html">
+      <button class="button-startm2" role="button">Rondo Alla Turca</button>
+    </a>
+  </div>
+  
+  <div class="button-start3">
+    <a href="./fantaisiesite.html">
+      <button class="button-startm3" role="button">Fantaisie Impromptu</button>
+    </a>
+  </div>
+
+  <div class="button-start4">
+    <a href="./index.html">
+      <button class="button-startm4" role="button">Für Elise</button>
+    </a>
+</div>
+      
+      <div id="header"></div>
+
+<div class="chunkoftext"> 
+    <h1 class="fade-in">FüR ELISE</h1>
+    <i class="fade-in">Litrally every grade 5 student has played this before...</i>
+    <p class="fade-in">The full name of the piece is ‘Für Elise: Bagatelle in A minor.</p>
+    <p class="fade-in">Elise is a woman’s name, usually a shortening of the name Elisabeth.</p>
+    <p class="fade-in">Fur Elise is generally considered a bagatelle,</p>
+    <p class="fade-in">a term that translates literally as "a thing of little value"</p>
+    <p class="fade-in">It is one of the most famous pieces of piano music.</p>
+</div>
+
+<div class="imagefade" id="imagefadejava">
+    <img src="beethoven.png" alt="sexy man5">
+</div>
+
+<div class="fureliseimagefade1" id="fureliseimagefadejava1">
+    <img src="furelise1.png" alt="1">
+</div>
+
+<div class="fureliseimagefade2" id="fureliseimagefadejava2">
+    <img src="furelise2.png" alt="2">
+</div>
+
+<div class="fureliseimagefade3" id="fureliseimagefadejava3">
+    <img src="furelise3.png" alt="3">
+</div>
+
+    <script>
+        //text script
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 1000); 
+            });
+        });
+        //text script
+
+        //image script
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById('imagefadejava');
+            setTimeout(() => {
+                image.classList.add('visible');
+            }, 500);
+        });
+        //image script
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById('fureliseimagefadejava1');
+            setTimeout(() => {
+                image.classList.add('visible');
+            }, 2500);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById('fureliseimagefadejava2');
+            setTimeout(() => {
+                image.classList.add('visible');
+            }, 2800);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.getElementById('fureliseimagefadejava3');
+            setTimeout(() => {
+                image.classList.add('visible');
+            }, 3100);
+        });
+
+    </script>
+</body>
+</html>
